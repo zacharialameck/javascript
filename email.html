@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Email validation</title>
+
+	<script type="text/javascript">
+		function validateEmail() {
+			var myemail = document.myform.myemail.value;
+			var atposition = myemail.indexOf("@");
+			var dotposition = myemail.lastIndexOf(".");
+			if(atposition<1 || dotposition<atposition+2 || dotposition+2>=myemail.lenght){
+				alert("please enter a valid email address \n atposition: "+atposition+"\n dotposition:"+dotposition);
+				return false;
+			}
+		}
+		function validateNumbers(){
+			var mynumber = document.secondform.mynumber.value;
+			if(isNaN(mynumber)){
+				document.getElementById("numloc").innerHTML="enter only numbers";
+				return false;
+			else{
+				return true;
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<form name="myform" onsubmit="return validateEmail();" method="post" onsubmit="return validateNumbers();">
+		email:<input type="text" name="myemail"><br><br>
+		<input type="submit" value="register"><br><b>
+
+	</form>
+	<form name="secondform"onsubmit="return validateNumbers();">
+
+		Number:<input type="text" name="mynumber"><br><br>
+
+		<span id="numloc"></span><br><br>
+		<input type="submit" value="check">
+		
+	</form>
+
+</body>
+</html>

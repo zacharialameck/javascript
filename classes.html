@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javascript classes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//class declaration
+		class students{
+
+			//object initialization
+			constructor(name, idNo, fees){
+				this.name = name;
+				this.idNo =idNo;
+				this.fees= fees;
+
+
+			}
+			//method declaration
+			display(){
+				document.writeln(this.name + " " + this.idNo + " " + this.fees + "<br>");
+			}
+		}
+		//passing objects to the variable
+
+		var stud1 = new students("zacharia mohamed",1234567,5000);
+		var stud2 = new students("hirsi abdullahi",1234556,6700);
+
+		//calling methods
+		stud1.display();
+		stud2.display();
+
+		//classes expression or re-declaration
+		var staff = class{
+			//initializing an object
+			constructor(id, name, sal){
+				this.id = id;
+				this.name = name;
+				this.sal = sal;
+
+			}
+			displayResult(){
+				document.writeln(this.id + " " + this.name + " " + this.sal + "<br>");
+			}
+		}
+		//passing the object to the variables
+
+		var staff1 = new staff(1,"abri ysufuf",250000);
+		var staff2 = new staff(2,"bahana hydrogen",600000);
+		var staff3 = new staff(3,"kasi bintu",300000);
+
+		//method call
+		staff1.displayResult();
+		staff2.displayResult();
+		staff3.displayResult();
+
+		//re-declaring
+		var staff = class{
+			constructor(id,name,sal){
+				this.id = id;
+				this.name = name;
+				this.sal = sal;	
+			}
+			displayResult(){
+				document.writeln(this.id + " " + this.name + " " + this.sal +"<br>");
+			}
+		}
+		//passing object to the variable
+		var staff1 = new staff(4,"akuot philip",460000);
+		var staff2 = new staff(5,"yasir mahadi",5500000);
+		var staff3 = new staff(6,"panique mohamed",3500000);
+
+		//calling the method
+
+
+		staff1.displayResult();
+		staff2.displayResult();
+		staff3.displayResult();
+
+
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form validations using javascript</title>
+
+	<script type="text/javascript">
+		function validateForm(){
+			var myName = document.myform.myName.value;
+			var myPassword = document.myform.myPassword.value;
+			var myPassword2 = document.myform.myPassword2.value;
+
+		if(myName == null  || myName == ""){
+			alert("The name should not be the blank");
+			return false;
+		}
+		else if(myPassword.length<8){
+alert(" the password is too short")
+            return true;
+		}
+
+		else if(myPassword == myPassword2) {
+			return true;
+		}
+		else{
+			alert("The two passwords do not match");
+			return false;
+		}
+	}	
+
+	</script>
+</head>
+<body>
+
+	<form name="myform" method="post" action="abc.jsp" onsubmit="return validateForm();">
+		name: <input type="text" name="myName"><br><br>
+		password: <input type="password" name="myPassword"><br><br>
+		confirm password: <input type="password" name="myPassword2"><br><br>
+
+				<input type="submit" value="register"><br><br>
+	</form>
+
+</body>
+</html>

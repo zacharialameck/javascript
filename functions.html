@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Function on a button click</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function functionName(){
+			alert("this is a revision function");
+		}
+		function squareNumber(number,number1,number2,number3){
+             alert(" the product of the numbers given is" + number*number1*number2*number3);
+
+		}
+		function firstFunction(firstName, secondName,thirdName){
+			var fullName = firstName + secondName + thirdName;
+			return fullName;
+		}
+		function secondFunction(){
+			var displayResult = firstFunction("zacharia "," mwanuke ", " lameck ");
+			document.write(displayResult);
+		}
+	</script>
+	<button onclick="functionName();">click me</button>
+	<input type="button" value="square" onclick="squareNumber(6,5,7,8);">
+	<button onclick="secondFunction();">show fullname</button>
+
+</body>
+</html>

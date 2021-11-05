@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>change color on a click of the button</title>
+</head>
+<body>
+	<p id="colorChange">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<button id="btnPink">pink</button>
+	<button id="btnBrown">Brown</button>
+	<button onclick="changeblue();">blue</button>
+	<button onclick="changered();">red</button>
+	<button onclick="changegreen();">green</button>
+	<button onclick="changeyellow();">yellow</button>
+
+
+	<script type="text/javascript">
+		function changeColors(){
+		}
+
+         function changeblue(){
+         	document.getElementById("colorChange").style.color = "blue"
+         }
+         function changered(){
+         	document.getElementById("colorChange").style.color ="red"
+         }
+         function changegreen(){
+         	document.getElementById("colorChange").style.color ="green"-[0]
+         }
+         function changeyellow(){
+         	document.getElementById("colorChange").style.color ="yellow"
+         }
+         let btnPink = document.querySelector("#btnPink");
+         let par = document.querySelector("p");
+         btnPink.addEventListener("click",() => par.style.color = "pink");
+         let btnBrown = document.querySelector("#btnBrown");
+         let pa = document.querySelector("p");
+         btnBrown.addEventListener("click",() => pa.style.color = "Brown");
+		
+	</script>
+
+</body>
+</html>

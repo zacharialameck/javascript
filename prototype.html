@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javascript prototype objects</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function employee(firstName,lastName,salary,title){
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.salary = salary;
+			this.title = title;
+
+		}
+		employee.prototype.fullDetails = function(){
+	return this.firstName + " " + this.lastName + " " + this.salary + " " + this.title;
+		}
+		var employee1 = new employee("mahamed","yusuf",655550,"director");
+		var employee2 = new employee("ali","musa",3666754,"cleaner");
+		var employee3 = new employee("muna","aisha",1200,"chef");
+
+		document.writeln(employee1.fullDetails()+"<br>");
+		document.writeln(employee2.fullDetails()+"<br>");
+		document.writeln(employee3.fullDetails()+"<br>");
+
+		function employer(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+		}
+		employer.prototype.company = "sir"
+
+		var employer1 = new employer("kuku","kaka");
+		var employer2 = new employer("kiki","kunda");
+
+		document.writeln(employer1.lastName+ " " + employer1.lastName + " " + employer1.company + "<br>");
+		document.writeln(employer2.lastName+ " " + employer2.lastName + " " + employer2.company);
+
+		document.writeln("name: " + employer1.firstName + " " + employer1.lastName + " " + "<br> company: " + employer1.company + "<br>");
+		document.writeln("name: " + employer2.firstName + " " + employer2.lastName + " " + "<br> company: " + employer2.company);
+
+
+
+		
+
+
+ 
+		
+	</script>
+
+</body>
+</html>
