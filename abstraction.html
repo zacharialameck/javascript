@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		//creating a constructor function 
+		function Vehicle()
+
+		{
+		this.vehicleName="vehicleName";
+		throw new Error("you cannot create an instance of abstract class");
+	}
+	Vehicle.prototype.display=function()
+	{
+		return "vehicle is: "+this.vehicleName;
+	}
+	//creating a constructor function
+	function Bike(vehicleName)
+	{
+		this.vehicleName=vehicleName;
+	}
+	//creating object without using the function constructor 
+	Bike.prototype=Object.create(Vehicle.prototype);
+	var bike=new Bike("honda");
+	document.writeln(bike.display()); */
+
+	//creating a constructor function
+	function Vehicle()
+	{
+		this.vehicleName=vehicleName;
+		throw new Error("you can not create an instance of abstract class");
+	}
+	//creating a constructor function
+	function Bike(vehicleName)
+	{
+		this.vehicleName=vehicleName;
+	}
+	Bike.prototype=Object.create(Vehicle.prototype);
+	var bike=new Bike("Honda");
+	document.writeln(bike instanceof Vehicle);
+	document.writeln(bike instanceof Bike);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		/*class A{
+	display(){
+	document.writeln("this is where we can invoke the method");
+
+	}
+		}
+		class B extends A{
+	display(){
+	document.writeln("<br>/this is where we can invoke the method for the second time");
+	}
+		}
+		var obj = [new A(); new B()]
+		obj.forEach(function(access) {
+	access.display();
+		});
+		*/
+
+		//prototype based polymorphism
+
+		function A(){
+
+		}
+
+		A.prototype.display = function(){
+			return "we are invoking A class";
+		}
+
+		
+		function B(){
+
+		}
+		B.prototype = Object.create(A.prototype);
+		var a = [new A(), new B()]
+		a.forEach(function(access) {
+			document.writeln(access.display());
+		});
+
+	</script>
+
+</body>
+</html>

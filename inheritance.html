@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class moment extends Date {
+			constructor(){
+				super();
+			}
+		}
+		var mm = new moment();
+		document.writeln("The current date is ");
+		document.writeln(mm.getDate()+"/" + mm.getMonth() + "/" + mm.getFullYear() + "<br>");
+		class bike{
+			constructor(){
+				this.company = "phoenix";
+		}	
+		}
+		class vehicle extends bike{
+			constructor(name, price){
+				super();
+				this.name = name;
+				this.price = price
+			}
+		}
+		var ve = new vehicle("toyota", 450000);
+		document.writeln(ve.company + " " + ve.name + " " + ve.price);
+//this is a constructor function
+		function Bike(company){
+			this.company = company;
+		}
+		Bike.prototype.getCompany = function(){
+			return this.company;
+
+		}
+		//creation of another constructor function
+		function vehicle1(name,price){
+		this.name = name;
+		this.price = price;
+	}
+	var bik = new bike("phoenix");
+	vehicle1.prototype.bik;
+	var veh = new vehicle1("lorry",67000000);
+
+	document.writeln("<br> phoenix"+ " " + veh.name + " " + veh.price)
+
+
+		
+
+
+
+	</script>
+
+</body>
+</html>

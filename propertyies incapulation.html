@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>incapulation</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class students{
+			constructor(){
+				var name;
+				var marks;
+			}
+			getName(){
+				return this.name;
+
+			}
+			setName(name){
+				this.name = name;
+
+			}
+			getMarks(){
+				return this.marks;
+			}
+			setMarks(marks){
+				return this.marks = marks;
+			}
+		}
+		var stdn = new students();
+		var stdn2 = new students();
+		var stdn3 = new students();
+
+		stdn.setName("mohamed abdullahi");
+		stdn.setMarks(90);
+		stdn2.setName("muna yasir");
+		stdn2.setMarks(80);
+		stdn3.setName("zacharia mwanuke");
+		stdn3.setMarks(99)
+
+
+		document.writeln(stdn.getName() + " " + stdn.getMarks() + "<br>");
+	    document.writeln(stdn2.getName() + " " + stdn2.getMarks() + "<br>");
+	    document.writeln(stdn3.getName() + " " + stdn3.getMarks());
+
+
+	    class students2{
+			constructor(){
+				var name;
+				var marks;
+			}
+			getName(){
+				return this.name;
+
+			}
+			setName(name){
+				this.name = name;
+
+			}
+			getMarks(){
+				return this.marks;
+			}
+			setMarks(marks){
+				if(marks<0 || marks>100){
+					alert("you antered invalid marks");
+				}
+
+				else{
+					this.marks = marks;
+				}
+			}
+		}
+		var stdd = new students2();
+		stdd.setName("idenphonse mohamed");
+		stdd.setMarks(678);
+		document.writeln(stdd.getName() + " " + stdd.getMarks());
+
+	</script>
+
+</body>
+</html>
