@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>set method</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var set = new Set();
+		/*
+		set.add("HTML");
+		set.add("CSS");
+		set.add("Javascript");
+		set.add("Databases");
+		set.add("coding");
+
+		for(let zacharia of set){
+            document.writeln(zacharia +"<br>");
+		}
+		*/
+		set.add("Ikram").add("Ali").add("Quassim").add("Idelphone").add("Muna").add("aisha").add("hirsi").add("panique").add("zacharia").add("abdullahi");
+
+		document.writeln("the size before deleting the object " + set.size);
+
+		document.writeln(set.has("zacharia"));
+		set.delete("zacharia");
+		document.writeln("<br> size after deleting the object " + set.size);
+		document.writeln(set.has("zacharia"));
+
+		//document.writeln(set.has("zacharia"));
+		/*
+		for(let element of set) {
+			document.writeln(element + "<br>");
+
+
+		}
+		*/
+	</script>
+
+</body>
+</html>

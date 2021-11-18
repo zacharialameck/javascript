@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id = "vitamin"></span>
+    <br><br>
+    <span id = "num"></span>
+    <br><br>
+    <button onclick ="sortArray();">sort fruits</button>
+    <button onclick="sortNumbers();">sort numbers</button>
+
+    <script>
+        var fruits =["banana", "pineapple", "pawpaw", "lemon", "mango", "orange", "avocado"];
+        document.getElementById("vitamin").innerHTML = fruits;
+        function sortArray(){
+
+            fruits.sort();
+            fruits.reverse();
+            document.getElementById("vitamin").innerHTML = fruits;
+        }
+        var numbers = [3,4,10,40,20,45,1,60];
+
+        document.getElementById("num").innerHTML = numbers;
+        function sortNumbers(){
+            numbers.sort(function(a, b) {return a -b});
+            document.getElementById("num").innerHTML = numbers;
+        }
+    </script>
+    
+</body>
+</html>
